@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text overflow</title>
+
+        <style>
+            body {
+                margin: 10px;
+                font-family: sans-serif;
+            }
+
+            #galerie_responsive {
+                max-width: 960px;
+                width: 90%;
+                height: 50%;
+                margin: 0 auto;
+            
+            }
+
+            .row-1 {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                
+            }
+            
+            .row-2 {
+                flex-grow: 100%;
+            }
+                
+            .coloana {
+                flex-basis: 20%;
+                box-sizing: border-box;
+                padding: 1px;
+                width: 100px;
+                border: 1px solid blue;               
+                border-radius: 10px;
+                
+            }
+
+            .background {
+
+                height: 150px;
+                background-color: blue;
+                background-image: url(placeholder-image.png);
+                border-radius: 8% 8% 0 0;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+            }
+
+            .text {
+                font-size: 20px;
+                margin: 1px 0px;
+                background-color: white;
+                background-position: center;
+                text-align: center;
+                background-size: cover;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            @media screen and (max-width: 1024px) {
+                .coloana,
+                p {
+                    flex-basis: 33.33%;
+                    font-size: 18px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .coloana,
+                p {
+                    flex-basis: 50%;
+                    font-size: 17px;
+                }
+            }
+            @media screen and (max-width: 414px) {
+                .coloana,
+                p {
+                    flex-basis: 100%;
+                    font-size: 16px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="galerie_responsive">
+            <h1>Gallery Heading</h1>
+        <div class="row-1">
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+             <div class="background"></div>
+             <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+            <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        <div class="coloana">
+             <div class="background"></div>
+            <div class="text">Image Title</div>
+        </div>
+        </div>
+        <div class="row-2">
+                <div class="paragraf">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula quam eros, eget condimentum augue 
+                        dictum sed. Vivamus blandit purus nibh, sit amet molestie felis sollicitudin id. Morbi tortor enim, varius eget 
+                        gravida eu, dictum in velit. Suspendisse sit amet metus aliquet, viverra est id, efficitur diam. Integer laoreet 
+                        nisi arcu, a venenatis nisl convallis a. Cras malesuada lobortis ex. Praesent vel massa a eros dignissim commodo. 
+                        Ut justo purus, tincidunt ut ultrices ac, ultrices eget tellus. Cras sodales libero sed velit aliquet 
+                        condimentum.</p>
+                </div>
+        </div>
+    </body>
+
+</html>
